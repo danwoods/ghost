@@ -1,1 +1,1 @@
-node index.js –production
+web: node index.js –production
