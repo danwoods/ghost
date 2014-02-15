@@ -24,7 +24,7 @@ config = {
         //      }
         //  },
         // ```
-
+/*
         database: {
             client: 'sqlite3',
             connection: {
@@ -32,13 +32,25 @@ config = {
             },
             debug: false
         },
+*/
+        database: {
+            client: 'postgres',
+            connection: {
+                  host: 'ec2-54-197-251-18.compute-1.amazonaws.com',
+                  user: 'pwuklinxwqxopa',
+                  password: process.env.PG_PASS,
+                  database: 'd9cmnhmn55b337',
+                  port: '5432'
+            }
+        },
         server: {
             // Host to be passed to node's `net.Server#listen()`
             //host: '127.0.0.1',
             host: '0.0.0.0',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
             //port: '2368'
-            port: '8080'
+            //port: '8080'
+            port: process.env.PORT
         }
     },
 
@@ -48,6 +60,7 @@ config = {
     production: {
         url: 'http://my-ghost-blog.com',
         mail: {},
+/*
         database: {
             client: 'sqlite3',
             connection: {
@@ -55,11 +68,23 @@ config = {
             },
             debug: false
         },
+*/
+        database: {
+            client: 'postgres',
+            connection: {
+                  host: 'ec2-54-197-251-18.compute-1.amazonaws.com',
+                  user: 'pwuklinxwqxopa',
+                  password: process.env.PG_PASS,
+                  database: 'd9cmnhmn55b337',
+                  port: '5432'
+            }
+        },
         server: {
             // Host to be passed to node's `net.Server#listen()`
             host: '127.0.0.1',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
-            port: '2368'
+            //port: '2368'
+            port: process.env.PORT
         }
     },
 
