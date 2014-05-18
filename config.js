@@ -65,8 +65,8 @@ config = {
           options: {
             service: 'Sendgrid',
             auth: {
-              user: 'SENDGRID_USERNAME',
-              pass: 'SENDGRID_PASSWORD'
+              user: process.env.SENDGRID_USERNAME,
+              pass: process.env.SENDGRID_PASSWORD
             }
           }
         },
