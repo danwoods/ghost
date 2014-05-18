@@ -8,7 +8,7 @@ config = {
     // ### Development **(default)**
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
-        url: 'http://my-ghost-blog.com',
+        url: 'http://mighty-reef-6516.herokuapp.com',
 
         mail: {
           transport: 'sendgrid',
