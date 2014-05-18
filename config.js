@@ -10,20 +10,17 @@ config = {
         // The url to use when providing links to the site, E.g. in RSS and email.
         url: 'http://my-ghost-blog.com',
 
-        // Example mail config
-        // Visit http://docs.ghost.org/mail for instructions
-        // ```
-        //  mail: {
-        //      transport: 'SMTP',
-        //      options: {
-        //          service: 'Mailgun',
-        //          auth: {
-        //              user: '', // mailgun username
-        //              pass: ''  // mailgun password
-        //          }
-        //      }
-        //  },
-        // ```
+        mail: {
+          transport: 'sendgrid',
+          host: 'smtp.sendgrid.net',
+          options: {
+            service: 'Sendgrid',
+            auth: {
+              user: process.env.SENDGRID_USERNAME,
+              pass: process.env.SENDGRID_PASSWORD
+            }
+          }
+        },
 /*
         database: {
             client: 'sqlite3',
