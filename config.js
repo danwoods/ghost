@@ -59,7 +59,17 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: 'http://my-ghost-blog.com',
-        mail: {},
+        mail: {
+          transport: 'sendgrid',
+          host: 'smtp.sendgrid.net',
+          options: {
+            service: 'Sendgrid',
+            auth: {
+              user: 'SENDGRID_USERNAME',
+              pass: 'SENDGRID_PASSWORD'
+            }
+          }
+        },
 /*
         database: {
             client: 'sqlite3',
